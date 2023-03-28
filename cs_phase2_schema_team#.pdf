@@ -1,0 +1,6 @@
+RELATIONAL SCHEMA
+
+Airlines(airlineID)
+
+Airplanes(airlineID [fk1], tail_num, seat capacity, speed, plane_type, props_or_jets)
+fk1: airlineID -> airlineID
