@@ -26,6 +26,8 @@ CREATE TABLE person (
 	miles int,
 	personlocationID char (50),
 	taxID char(20) UNIQUE,
+	pilot_tail char(20),
+	pilot_airline char(15),
 	PRIMARY KEY (personID),
 	CONSTRAINT fk1 FOREIGN KEY (persolocationID) REFERENCES locationID
 );
