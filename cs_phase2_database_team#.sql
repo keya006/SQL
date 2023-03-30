@@ -297,7 +297,38 @@ INSERT INTO airplane VALUES
 ('n620la', 'United', 4, 200, 'prop', 'plane_8');
 
 
+-- Creating location table
+DROP TABLE IF EXISTS location;
+CREATE TABLE LOCATION (
+	locationID char(15) NOT NULL,
+	PRIMARY KEY (locationID)
+);
 
+
+-- Inserting data into location table
+INSERT INTO location VALUES
+('plane_1'),
+('plane_11'),
+('plane_15'),
+('plane_2'),
+('plane_4'),
+('plane_7'),
+('plane_8'),
+('plane_9'),
+('port_1'),
+('port_10'),
+('port_11'),
+('port_13'),
+('port_14'),
+('port_15'),
+('port_17'),
+('port_18'),
+('port_2'),
+('port_3'),
+('port_4'),
+('port_5'),
+('port_7'),
+('port_9');
 
 
 
