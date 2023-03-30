@@ -1,34 +1,20 @@
--- Table structure for table location
-DROP TABLE IF EXISTS location;
-CREATE TABLE location (
+-- Table structure for table airline
+DROP TABLE IF EXISTS airline;
+CREATE TABLE airline (
 	locationID char(50) NOT NULL,
 	PRIMARY KEY (locationID)
 );
 
--- Dumping data for table location
-INSERT INTO location VALUES
-('plane_1'),
-('plane_11'),
-('plane_15'),
-('plane_2'),
-('plane_4'),
-('plane_7'),
-('plane_8'),
-('plane_9'),
-('plane_1'),
-('plane_10'),
-('plane_11'),
-('plane_13'),
-('plane_14'),
-('plane_15'),
-('plane_17'),
-('plane_18'),
-('plane_2'),
-('plane_3'),
-('plane_4'),
-('plane_5'),
-('plane_7'),
-('plane_9');
+-- Dumping data for table airline
+INSERT INTO airline  VALUES
+('Air_france', 25)
+('American', 45)
+('Delta', 46)
+('Jetblue', 8)
+('Lufthansa', 31)
+('Southwest', 22)
+('Spirit', 4)
+('United', 40)
 
 -- Creating table for person
 DROP TABLE IF EXISTS person;
@@ -40,5 +26,93 @@ CREATE TABLE person (
 	PRIMARY KEY (personID),
 	CONSTRAINT fk1 FOREIGN KEY (persolocationID) REFERENCES locationID
 );
+
+-- Inserting data for table person
+INSERT INTO person VALUES
+('P1', 'Jeanne', 'Nelson', 'plane_1),
+('P1', 'Jeanne', 'Nelson', 'plane_1),
+('P1', 'Jeanne', 'Nelson', 'plane_1),
+('P1', 'Jeanne', 'Nelson', 'plane_1),
+('P1', 'Jeanne', 'Nelson', 'plane_1),
+('P1', 'Jeanne', 'Nelson', 'plane_1),
+('P1', 'Jeanne', 'Nelson', 'plane_1),
+('P1', 'Jeanne', 'Nelson', 'plane_1);
+
+-- Creating table for airport
+DROP TABLE IF EXISTS airport;
+CREATE TABLE airport (
+	airportID char(5) NOT NULL,
+	NAME char(50) NOT NULL,
+	CITY char(15) NOT NULL,
+	STATE char(5) NOT NULL,
+	locID char(15),
+	PRIMARY KEY (airportID),
+	CONSTRAINT fk15 (locID) REFERENCES locationID
+);
+
+
+-- Inserting data for table airport
+INSERT INTO airport VALUES
+('ABQ', 'Albuquerque International Sunport
+', '', 'NM', ''),
+('ANC', 'Ted Stevens Anchorage International Airport
+', '', 'NM', ''),
+('ATL', '', '', 'NM', ''),
+('BDL', '', '', 'NM', ''),
+('BFI', '', '', 'NM', ''),
+('BHM', '', '', 'NM', ''),
+('BNA', '', '', 'NM', ''),
+('BOI', '', '', 'NM', ''),
+('BOS', '', '', 'NM', ''),
+('BTV', '', '', 'NM', ''),
+('BWI', '', '', 'NM', ''),
+('BZN', '', '', 'NM', ''),
+('CHS', '', '', 'NM', ''),
+('CLE', '', '', 'NM', ''),
+('CLT', '', '', 'NM', ''),
+('CRW', '', '', 'NM', ''),
+('DAL', '', '', 'NM', ''),
+('DCA', '', '', 'NM', ''),
+('DEN', '', '', 'NM', ''),
+('DFW', '', '', 'NM', ''),
+('DSM', '', '', 'NM', ''),
+('DTW', '', '', 'NM', ''),
+('EWR', '', '', 'NM', ''),
+('FAR', '', '', 'NM', ''),
+('FSD', '', '', 'NM', ''),
+('GSN', '', '', 'NM', ''),
+('GUM', '', '', 'NM', ''),
+('HNL', '', '', 'NM', ''),
+('HOU', '', '', 'NM', ''),
+('IAD', '', '', 'NM', ''),
+('IAH', '', '', 'NM', ''),
+('ICT', '', '', 'NM', ''),
+('ILG', '', '', 'NM', ''),
+('IND', '', '', 'NM', ''),
+('ISP', '', '', 'NM', ''),
+('JAC', '', '', 'NM', ''),
+('JAN', '', '', 'NM', ''),
+('JFK', '', '', 'NM', ''),
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
